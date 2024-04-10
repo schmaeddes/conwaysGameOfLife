@@ -1,4 +1,4 @@
-package org.example;
+package de.schmaeddes;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +20,13 @@ public class Cell extends JLabel {
 
     public void setAlive(boolean alive) {
         this.alive = alive;
-        setBackground(Color.GREEN);
+
+        if (alive) {
+            setBackground(Color.BLACK);
+        } else {
+            setBackground(null);
+        }
+
     }
 
     public int getRow() {
